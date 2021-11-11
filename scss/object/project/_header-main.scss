@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.p-header {
+    width: 100%;
+    height: 100%;
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        .p-header__title {
+            font-size: 14px;
+            margin-left: 20px;
+        }
+        &-box {
+            display: none;
+            @include mixin.pc {
+                display: flex;
+            }
+        }
+    }
+}
