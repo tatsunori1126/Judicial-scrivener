@@ -1,0 +1,69 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.p-footer {
+    width: 100%;
+    padding: 0 20px 22px;
+    background-color: #364E66;
+    color: #FFFFFF;
+    @include mixin.tab {
+        padding: 0 50px 35px;
+    }
+    @include mixin.mid {
+        display: flex;
+        justify-content: center;
+        height: 260px;
+    }
+    &__access-box {
+        .p-footer__office-name {
+            padding: 50px 0 16px 0;
+            font-size: 20px;
+            font-weight: normal;
+            letter-spacing: 0.03em;
+            @include mixin.mid {
+                padding: 65px 0 16px 0;
+            }
+        }
+        .p-footer__postal-code {
+            letter-spacing: 0.03em;
+        }
+        .p-footer__address {
+            margin-bottom: 50px;
+            line-height: 22px;
+            letter-spacing: 0.03em;
+        }
+    }
+    &__nav {
+        display: flex;
+        @include mixin.mid {
+            padding: 65px 0 0 60px;
+        }
+        .p-footer__nav-box {
+            .p-footer__nav-list {
+                margin-bottom: 28px;
+                .p-footer__nav-logo {
+                    color: #FEFEFE;
+                    letter-spacing: 0.03em;
+                    white-space: nowrap;
+                }
+            }
+        }
+        &-box2 {
+            margin-left: 70px;
+            @include mixin.mid {
+                margin-left: 60px;
+            }
+        }
+    }
+}
+.p-footer__copyright-box {
+    width: 100%;
+    height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .p-footer__copyright-name {
+        color: #212121;
+        font-size: 10px;
+        letter-spacing: 0.03em;
+    }
+}

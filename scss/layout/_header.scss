@@ -1,5 +1,13 @@
 @charset "UTF-8";
+@use "../foundation/mixin";
 .l-header {
     height: 45px;
     width: 100%;
+    position: fixed;
+    z-index: 10;
+    background-color: #F6F6F6;
+    @include mixin.sub {
+        position: inherit;
+        height: 67px;
+    }
 }

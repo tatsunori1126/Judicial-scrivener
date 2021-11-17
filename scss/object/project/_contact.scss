@@ -1,0 +1,101 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.p-main__contact {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(172, 186, 200, 0.34) 0%, rgba(231, 236, 240, 0.67) 38.63%, rgba(227, 233, 238, 0.649992) 65.4%, rgba(202, 210, 220, 0.507577) 100%);
+    &-sub {
+        width: 100%;
+        padding: 55px 20px;
+        text-align: center;
+        @include mixin.tab {
+            padding: 65px 50px 70px;
+        }
+        @include mixin.sub {
+            padding: 65px 110px 70px;
+        }
+        @include mixin.pc {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        .p-main__contact-tell-box {
+            &-title {
+                font-size: 17px;
+                padding: 21px 72px;
+                letter-spacing: 0.02em;
+                background: rgba(9, 43, 80, 0.21);
+                border-radius: 2px;
+            }
+            .p-main__contact-block {
+                background: #FAFAFA;
+                border-radius: 2px;
+                .p-main__contact-tell-number {
+                    font-size: 30px;
+                    padding: 20px 27px 20px 27px;
+                    color: #32415B;
+                    .fa-phone-alt {
+                        content: "\f879";
+                        display: inline-block;
+                        font-family: "Font Awesome 5 Free";
+                        margin-right: 30px;
+                    }
+                }
+                .p-main__contact-tell-text {
+                    font-size: 14px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+        .p-main__contact-mail-box {
+            margin-top: 45px;
+            width: 100%;
+            background: #FAFAFA;
+            border-radius: 2px;
+            .p-main__web-contact {
+                padding: 21px 80px;
+                background: rgba(9, 43, 80, 0.21);
+                border-radius: 2px;
+                font-size: 17px;
+                letter-spacing: 0.02em;
+                white-space: nowrap;
+            }
+            .p-main__contact-form-box {
+                width: 100%;
+                padding: 0 14px;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+                .p-main__contact-form {
+                    font-size: 14px;
+                    padding: 20px 0;
+                    background: #C5AA40;
+                    border-radius: 2px;
+                    letter-spacing: 0.02em;
+                    color: #FAFAFA;
+                    border: 0.2px solid #FAFAFA;
+                    display: inline-block;
+                    margin: 20px 0;
+                    width: 100%;
+                    white-space: nowrap;
+                    position: relative;
+                    .fa-envelope {
+                        content: "\f0e0";
+                        display: inline-block;
+                        font-family: "Font Awesome 5 Free";
+                        margin-right: 12px;
+                        margin-left: -25px;
+                    }
+                }
+                .p-main__contact-form::after {
+                    content: "";
+                    position: absolute;
+                    display: inline-block;
+                    top: 26px;
+                    width: 30px;
+                    height: 7px;
+                    border-bottom: 1.5px solid #FFFFFF;
+                    border-right: 1.5px solid #FFFFFF;
+                    transform: skew(45deg);
+                    margin-left: 7px;
+                }
+            }
+        }
+    }
+}

@@ -12,6 +12,7 @@
    
    @use "layout/header";
    @use "layout/main";
+   @use "layout/footer";
 
 /* ==========================================================================
    Object
@@ -27,6 +28,11 @@
    @use "object/project/header-main";
    @use "object/project/main-visual";
    @use "object/project/about-us";
+   @use "object/project/servise";
+   @use "object/project/news";
+   @use "object/project/contact";
+   @use "object/project/footer-main";
+   @use "object/project/hamburger-btn";
 
 /* Utility
    ----------------------------------------------------------------- */

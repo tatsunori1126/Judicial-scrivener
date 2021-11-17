@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>架空司法書士サイト</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Noto+Sans:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -13,8 +14,8 @@
 <body>
     <header class="l-header">
         <div class="p-header">
-            <nav class="p-header__nav">
-                <h1 class="p-header__title"><a href="#">司法書士事務所</a></h1>
+            <h1 class="p-header__title"><a href="#">司法書士事務所</a></h1>
+            <nav id="slide-menu" class="p-header__nav">
                 <ul class="p-header__nav-box">
                     <li class="p-header__nav-list"><a href="#">ホーム</a></li>
                     <li class="p-header__nav-list"><a href="#">事務所概要</a></li>
@@ -23,6 +24,9 @@
                     <li class="p-header__nav-list p-header__contact-list"><a href="#">お問い合わせ</a></li>
                 </ul>
             </nav>
+            <button type="button" class="btn js-btn" aria-expanded="false">
+                <span class="btn-line"></span>
+            </button>
         </div>
     </header>
     <main class="l-main">
@@ -30,6 +34,7 @@
             <div class="p-main__mask"></div>
             <div class="p-main__top-visual">
                 <img class="p-main__top-visual-top-img" src="/images/写真.png" alt="トップ画像">
+                <img class="p-main__top-visual-top-pc-img" src="/images/pc-top-img.png" alt="トップ画像">
                 <h2 class="p-main__top-visual-title">法律関係の手続きについて<br>安心してお任せください。</h2>
             </div>
         </div>
@@ -40,28 +45,144 @@
                         <h3 class="p-main__about-title section-title">ABOUT US</h3>
                         <p class="p-main__about-title-sub section-title__sub">当事務所について</p>
                     </div>
-                    <div class="p-main__about-01-box p-main__about-box">
-                        <img class="p-main__about-img01 p-main__about-img" src="/images/about01.png" alt="Aboutの画像1">
-                        <span class="p-main__about-number01 p-main__about-number">01</span>
-                        <h4 class="p-main__about-big-text">文章が入ります。文章が入ります。</h4>
-                        <p class="p-main__about-text">文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。</p>
-                    </div>
-                    <div class="p-main__about-02-box p-main__about-box">
-                        <img class="p-main__about-img02 p-main__about-img" src="/images/about02.png" alt="Aboutの画像2">
-                        <span class="p-main__about-number02 p-main__about-number">02</span>
-                        <h4 class="p-main__about-big-text">文章が入ります。文章が入ります。</h4>
-                        <p class="p-main__about-text">文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。</p>
-                    </div>
-                    <div class="p-main__about-03-box p-main__about-box">
-                        <img class="p-main__about-img03 p-main__about-img" src="/images/about03.png" alt="Aboutの画像3">
-                        <span class="p-main__about-number03 p-main__about-number">03</span>
-                        <h4 class="p-main__about-big-text">文章が入ります。文章が入ります。</h4>
-                        <p class="p-main__about-text">文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。</p>
+                    <div class="p-main__about-main-box">
+                        <div class="p-main__about-01-box p-main__about-box">
+                            <img class="p-main__about-img01 p-main__about-img" src="/images/about01.png" alt="Aboutの画像1">
+                            <div class="p-main__about-number-box">01
+                                <!-- <span class="p-main__about-number01 p-main__about-number">01</span> -->
+                                <span class="p-main__about-number-after"></span>
+                            </div>
+                            <h4 class="p-main__about-big-text">文章が入ります。文章が入ります。</h4>
+                            <p class="p-main__about-text">文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。</p>
+                        </div>
+                        <div class="p-main__about-02-box p-main__about-box">
+                            <img class="p-main__about-img02 p-main__about-img" src="/images/about02.png" alt="Aboutの画像2">
+                            <div class="p-main__about-number-box">02
+                                <!-- <span class="p-main__about-number02 p-main__about-number">02</span> -->
+                                <span class="p-main__about-number-after"></span>
+                            </div>
+                            <h4 class="p-main__about-big-text">文章が入ります。文章が入ります。</h4>
+                            <p class="p-main__about-text">文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。</p>
+                        </div>
+                        <div class="p-main__about-03-box p-main__about-box">
+                            <img class="p-main__about-img03 p-main__about-img" src="/images/about03.png" alt="Aboutの画像3">
+                            <div class="p-main__about-number-box">03
+                                <!-- <span class="p-main__about-number03 p-main__about-number">03</span> -->
+                                <span class="p-main__about-number-after"></span>
+                            </div>
+                            <h4 class="p-main__about-big-text">文章が入ります。文章が入ります。</h4>
+                            <p class="p-main__about-text">文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。文章が入ります。</p>
+                        </div>
                     </div>
                     <a href="#" class="p-main__about-detail">詳しく見る</a>
                 </div>
             </section>
+            <section class="p-main__servise">
+                <div class="p-main__servise-sub">
+                    <div class="p-main__servise-title-box">
+                        <h3 class="p-main__servise-title section-title">SERVISE</h3>
+                        <p class="p-main__servise-title-sub section-title__sub">サービス案内</p>
+                    </div>
+                    <div class="p-main__servise-nav">
+                        <ul class="p-main__servise-nav-box">
+                            <li class="p-main__servise-nav-list"><a href="#"><img src="/images/スタンダードな家アイコン (1) 1.png" alt="家アイコン">不動産登記</a></li>
+                            <li class="p-main__servise-nav-list"><a href="#"><img src="/images/メモアイコン (1) 1.png" alt="メモアイコン">債務整理手続</a></li>
+                            <li class="p-main__servise-nav-list"><a href="#"><img src="/images/人脈アイコン1 (1) 1.png" alt="人脈アイコン">相続</a></li>
+                            <li class="p-main__servise-nav-list"><a href="#"><img src="/images/フリーの握手アイコン (1) 1.png" alt="握手アイコン">成年後見申立手続</a></li>
+                        </ul>
+                        <ul class="p-main__servise-nav-box">
+                            <li class="p-main__servise-nav-list"><a href="#"><img src="/images/相談アイコン1 2.png" alt="相談アイコン">民事信託</a></li>
+                            <li class="p-main__servise-nav-list"><a href="#"><img src="/images/書類検索アイコン1 (1) 1.png" alt="書類検索アイコン">企業法務</a></li>
+                            <li class="p-main__servise-nav-list"><a href="#"><img src="/images/SNS人物アイコン 2 (1) 1.png" alt="SNS人物アイコン">事業継承</a></li>
+                        </ul>
+                    </div>
+                    <p class="p-main__servise-nav-text">司法手続の専門、◯◯司法書士事務所にお任せください。<br>
+                        個人のお客様、法人のお客様を問わず、幅広い案件を取り扱っております。</p>
+                </div>
+            </section>
+            <section class="p-main__news">
+                <div class="p-main__news-sub">
+                    <div class="p-main__news-title-box">
+                        <h3 class="p-main__news-title section-title">WHAT’S NEWS</h3>
+                        <p class="p-main__news-title-sub section-title__sub">新着情報</p>
+                    </div>
+                    <div class="p-main__news-box">
+                        <div class="p-main__news-block">
+                            <p class="p-main__news-time">2021.08.01</p>
+                            <p class="p-main__news-tag">不動産登記</p>
+                        </div>
+                        <p class="p-main__news-text">タイトルが入ります。タイトルが入ります。</p>
+                    </div>
+                    <div class="p-main__news-box">
+                        <div class="p-main__news-block">
+                            <p class="p-main__news-time">2021.08.01</p>
+                            <p class="p-main__news-tag">事業継承</p>
+                        </div>
+                        <p class="p-main__news-text">タイトルが入ります。タイトルが入ります。</p>
+                    </div>
+                    <div class="p-main__news-box">
+                        <div class="p-main__news-block">
+                            <p class="p-main__news-time">2021.08.01</p>
+                            <p class="p-main__news-tag">債務整理手続</p>
+                        </div>
+                        <p class="p-main__news-text">タイトルが入ります。タイトルが入ります。</p>
+                    </div>
+                    <div class="p-main__news-box">
+                        <div class="p-main__news-block">
+                            <p class="p-main__news-time">2021.08.01</p>
+                            <p class="p-main__news-tag">不動産登記</p>
+                        </div>
+                        <p class="p-main__news-text">タイトルが入ります。タイトルが入ります。</p>
+                    </div>
+                    <a href="#" class="p-main__news-detail">一覧を見る</a>
+                </div>
+            </section>
+            <section class="p-main__contact">
+                <div class="p-main__contact-sub">
+                    <div class="p-main__contact-title-box">
+                        <h3 class="p-main__contact-title section-title">CONTACT</h3>
+                        <p class="p-main__contact-text section-title__sub">お問い合わせ</p>
+                    </div>
+                    <div class="p-main__contact-tell-box">
+                        <p class="p-main__contact-tell-box-title">お電話でのお問い合わせ</p>
+                        <div class="p-main__contact-block">
+                            <p class="p-main__contact-tell-number"><i class="fas fa-phone-alt"></i>012-3456-7890</p>
+                            <p class="p-main__contact-tell-text">受付時間　9:00 ~ 18:30 ( 定休日 ◯曜日 )</p>
+                        </div>
+                    </div>
+                    <div class="p-main__contact-mail-box">
+                        <p class="p-main__web-contact">Webでのお問い合わせ</p>
+                        <div class="p-main__contact-form-box">
+                            <a class="p-main__contact-form" href="#"><i class="fas fa-envelope"></i>お問い合わせフォームはこちら</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </article>
     </main>
+    <footer class="l-footer">
+        <div class="p-footer">
+            <div class="p-footer__access-box">
+                <h4 class="p-footer__office-name">〇〇司法書士事務所</h4>
+                <p class="p-footer__postal-code">〒000-0000</p>
+                <p class="p-footer__address">東京都〇〇市〇〇区〇〇町000丁目<br>〇〇ビル 1F</p>
+            </div>
+            <nav class="p-footer__nav">
+                <ul class="p-footer__nav-box p-footer__nav-box1">
+                    <li class="p-footer__nav-list"><a class="p-footer__nav-logo" href="#">ホーム</a></li>
+                    <li class="p-footer__nav-list"><a class="p-footer__nav-logo" href="#">事務所概要</a></li>
+                    <li class="p-footer__nav-list"><a class="p-footer__nav-logo" href="#">サービス</a></li>
+                </ul>
+                <ul class="p-footer__nav-box p-footer__nav-box2">
+                    <li class="p-footer__nav-list"><a class="p-footer__nav-logo" href="#">新着情報</a></li>
+                    <li class="p-footer__nav-list"><a class="p-footer__nav-logo" href="#">プライバシーポリシー</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="p-footer__copyright-box">
+            <p class="p-footer__copyright-name">Copyright© 司法書士事務所︎</p>
+        </div>
+    </footer>
+    <script src="/js/script.js"></script>
 </body>
 </html>

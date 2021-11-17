@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "../../foundation/mixin";
 article {
     margin-top: 120px;
 }
@@ -8,47 +9,122 @@ article {
         width: 100%;
         padding: 0 20px;
         text-align: center;
-        .p-main__about-box {
-            box-shadow: (0px 6px 6px rgba(53, 95, 134, 0.1));
-            margin-bottom: 60px;
-            .p-main__about-img {
-                height: 250px;
-                width: 100%;
-                object-fit: cover;
+        @include mixin.tab {
+            padding: 0 50px;
+        }
+        @include mixin.sub {
+            padding: 0 110px;
+        }
+        @include mixin.pc {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        .p-main__about-title-box {
+            .p-main__about-title {
+                margin-top: -10px;
+                @include mixin.sub {
+                    padding-top: 75px;
+                }
             }
-            .p-main__about-number {
-                font-size: 45px;
-                font-weight: bold;
-                position: relative;
+        }
+        .p-main__about-main-box {
+            @include mixin.sub {
                 display: flex;
-                justify-content: left;
-                top: -35px;
-                margin-left: 22px;
+                justify-content: space-between;
             }
-            .p-main__about-number::after {
-                content: "";
-                position: absolute;
-                display: inline-block;
-                width: 30px;
-                border: 1.4px solid #32415B;
-                background-color: #32415B;
-                top: 62px;
-                margin-left: 14px;
-            }
-            .p-main__about-big-text {
-                text-align: left;
-                font-size: 19px;
-                font-weight: normal;
-                margin: 0 17px 21px;
-                letter-spacing: -0.01em;
-            }
-            .p-main__about-text {
-                font-size: 14px;
-                line-height: 30px;
-                letter-spacing: 0.06em;
-                text-align: left;
-                margin: 0 17px;
-                padding-bottom: 24px;
+            .p-main__about-box {
+                box-shadow: (0px 6px 6px rgba(53, 95, 134, 0.1));
+                margin-bottom: 60px;
+                @include mixin.sub {
+                    width: 31%;
+                }
+                .p-main__about-img {
+                    height: 250px;
+                    width: 100%;
+                    object-fit: cover;
+                    @include mixin.tab {
+                        height: 380px;
+                    }
+                    @include mixin.sub {
+                        height: 250px;
+                    }
+                }
+                // .p-main__about-number {
+                //     font-size: 45px;
+                //     font-weight: bold;
+                //     position: relative;
+                //     display: flex;
+                //     justify-content: left;
+                //     top: -35px;
+                //     margin-left: 22px;
+                //     font-family: 'Noto Serif JP', serif;
+                //     color: #32415B;
+                // }
+                // .p-main__about-number::after {
+                //     content: "";
+                //     position: absolute;
+                //     display: inline-block;
+                //     width: 30px;
+                //     border: 1.4px solid #32415B;
+                //     background-color: #32415B;
+                //     top: 62px;
+                //     margin-left: 14px;
+                // }
+                .p-main__about-number-box {
+                    font-size: 45px;
+                    font-weight: bold;
+                    position: relative;
+                    // display: flex;
+                    // justify-content: left;
+                    text-align: left;
+                    top: -35px;
+                    margin-left: 22px;
+                    font-family: 'Noto Serif JP', serif;
+                    color: #32415B;
+                    .p-main__about-number-after {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        width: 30px;
+                        border: 1.4px solid #32415B;
+                        background-color: #32415B;
+                        // top: 62px;
+                        margin-left: 14px;
+                    }
+                }
+                .p-main__about-big-text {
+                    text-align: left;
+                    font-size: 19px;
+                    font-weight: normal;
+                    margin: 0 17px 21px;
+                    letter-spacing: -0.01em;
+                    font-family: 'Noto Serif JP', serif;
+                    @include mixin.tab {
+                        font-size: 24px;
+                        margin: 0 30px 34px;
+                    }
+                    @include mixin.sub {
+                        font-size: 21px;
+                        margin: 0 25px 34px;
+                    }
+                }
+                .p-main__about-text {
+                    font-size: 14px;
+                    line-height: 30px;
+                    letter-spacing: 0.06em;
+                    text-align: left;
+                    margin: 0 17px;
+                    padding-bottom: 24px;
+                    @include mixin.tab {
+                        font-size: 18px;
+                        margin: 0 30px;
+                        padding-bottom: 50px;
+                    }
+                    @include mixin.sub {
+                        font-size: 15px;
+                        margin: 0 25px;
+                    }
+                }
             }
         }
         .p-main__about-detail {
@@ -62,6 +138,22 @@ article {
             display: inline-block;
             margin-bottom: 55px;
             line-height: 55px;
+            white-space: nowrap;
+            position: relative;
+            @include mixin.tab {
+                width: 60%;
+            }
+        }
+        .p-main__about-detail::after {
+            content: "";
+            position: absolute;
+            top: 22px;
+            width: 44px;
+            height: 7px;
+            border-bottom: 1.5px solid #FFFFFF;
+            border-right: 1.5px solid #FFFFFF;
+            transform: skew(45deg);
+            margin-left: 30px;
         }
     }
 }

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+@use "../../foundation/mixin";
+.p-main__servise {
+    width: 100%;
+    padding-top: 55px;
+    background: linear-gradient(90deg, rgba(172, 186, 200, 0.34) 0%, rgba(231, 236, 240, 0.67) 38.63%, rgba(227, 233, 238, 0.649992) 65.4%, rgba(202, 210, 220, 0.507577) 100%);
+    &-sub {
+        width: 100%;
+        padding: 0 20px;
+        @include mixin.tab {
+            padding: 0 50px;
+        }
+        @include mixin.sub {
+            padding: 0 110px;
+        }
+        @include mixin.pc {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        .p-main__servise-title-box {
+            text-align: center;
+        }
+        .p-main__servise-nav {
+            @include mixin.mid {
+                display: flex;
+                justify-content: space-between;
+            }
+            &-box {
+                @include mixin.mid {
+                    width: 45%;
+                }
+                .p-main__servise-nav-list {
+                    a {
+                        font-size: 15px;
+                        height: 65px;
+                        width: 100%;
+                        background: linear-gradient(90deg, rgba(83, 97, 114, 0.65) 0%, rgba(98, 113, 136, 0.51) 31.78%, rgba(99, 115, 137, 0.4) 49.11%, rgba(97, 113, 134, 0.55) 72.51%, rgba(93, 109, 129, 0.65) 100%);
+                        display: inline-block;
+                        line-height: 65px;
+                        margin-bottom: 25px;
+                        color: #32415B;
+                        @include mixin.tab {
+                            font-size: 18px;
+                        }
+                        @include mixin.mid {
+                            font-size: 16px;
+                        }
+                        img {
+                            margin-left: 38px;
+                            margin-right: 20px;
+                            position: relative;
+                            top: 10px;
+                        }
+                    }
+                    a::after {
+                        content: "";
+                        position: relative;
+                        float: right;
+                        top: 25px;
+                        width: 44px;
+                        height: 7px;
+                        border-bottom: 1.5px solid #32415B;
+                        border-right: 1.5px solid #32415B;
+                        transform: skew(45deg);
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }
+        .p-main__servise-nav-text {
+            text-align: left;
+            margin-top: 20px;
+            line-height: 24px;
+            font-size: 15px;
+            letter-spacing: 0.02em;
+            padding-bottom: 55px;
+            @include mixin.tab {
+                font-size: 18px;
+            }
+            @include mixin.mid {
+                text-align: center;
+            }
+        }
+    }
+}

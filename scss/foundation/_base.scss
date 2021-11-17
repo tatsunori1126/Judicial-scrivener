@@ -1,5 +1,12 @@
 @charset "UTF-8";
+html {
+    font-size: 100%;
+}
 body, a {
     color: #212121;
     letter-spacing: 0.04em;
+}
+body {
+    font-family: "Noto Sans";
+    background-color: #F6F6F6;
 }
