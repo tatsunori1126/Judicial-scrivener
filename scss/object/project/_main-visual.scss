@@ -6,6 +6,7 @@
     height: 405px;
     width: 100%;
     background-size: cover;
+    background-position: center;
     @include mixin.tab {
         height: 500px;
     }
@@ -42,38 +43,57 @@
             top: -553px;
         }
         &-top-img {
-            object-fit: cover;
+            background-image: url(/images/写真.png);
+            background-size: cover;
+            background-position: center;
             width: 100%;
             height: 439px;
-            margin: 83px auto 0;
+            margin-top: 83px;
             @include mixin.tab {
+                background-image: url(/images/pc-top-img.png);
                 margin: 100px auto 0;
                 height: 540px;
             }
             @include mixin.sub {
-                display: none;
-            }
-        }
-        .p-main__top-visual-top-pc-img {
-            display: none;
-            @include mixin.sub {
-                display: block;
                 height: 642px;
-                width: 100%;
-                object-fit: cover;
                 margin: 68px auto 0;
             }
         }
+        // &-top-img {
+        //     object-fit: cover;
+        //     width: 100%;
+        //     height: 439px;
+        //     margin: 83px auto 0;
+        //     @include mixin.tab {
+        //         margin: 100px auto 0;
+        //         height: 540px;
+        //     }
+        //     @include mixin.sub {
+        //         display: none;
+        //     }
+        // }
+        // .p-main__top-visual-top-pc-img {
+        //     display: none;
+        //     @include mixin.sub {
+        //         display: block;
+        //         height: 642px;
+        //         width: 100%;
+        //         object-fit: cover;
+        //         margin: 68px auto 0;
+        //     }
+        // }
         .p-main__top-visual-title {
+            display: none;
             font-size: 20px;
             font-weight: normal;
             writing-mode: vertical-rl;
             letter-spacing: 0.155em;
-            position: absolute;
-            top: 168px;
+            // position: absolute;
+            // top: 168px;
             padding-left: 60px;
             font-family: "Hiragino Mincho ProN";
-            height: 80%;
+            height: 90%;
+            padding-top: 81px;
             @include mixin.tab {
                 font-size: 26px;
                 padding-left: 110px;
@@ -82,9 +102,13 @@
             @include mixin.sub {
                 font-size: 30px;
                 height: 80%;
+                // top: 150px;
+                padding-left: 200px;
             }
             @include mixin.pc {
                 height: 90%;
+                padding-left: 300px;
+                // top: 115px;
             }
         }
     }

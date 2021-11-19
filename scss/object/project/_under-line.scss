@@ -1,0 +1,43 @@
+@charset "UTF-8";
+@use "../../foundation/extend";
+.p-header {
+    &__nav {
+        &-box {
+            .p-header__under-line {
+                a {
+                    position: relative;
+                }
+                a:hover {
+                    color: #212121;
+                }
+                a::after {
+                    @extend .under-line;
+                }
+                a:hover::after {
+                    transform: scale(1,1);
+                }
+            }
+        }
+    }
+}
+.p-footer {
+    &__nav {
+        &-box {
+            .p-footer__nav-list {
+                a {
+                    position: relative;
+                }
+                a:hover {
+                    color: #FEFEFE;
+                }
+                a::after {
+                    @extend .under-line;
+                    background: #FEFEFE;
+                }
+                a:hover::after {
+                    transform: scale(1,1);
+                }
+            }
+        }
+    }
+}

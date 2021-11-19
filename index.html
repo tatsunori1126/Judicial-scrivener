@@ -17,11 +17,20 @@
             <h1 class="p-header__title"><a href="#">司法書士事務所</a></h1>
             <nav id="slide-menu" class="p-header__nav">
                 <ul class="p-header__nav-box">
-                    <li class="p-header__nav-list"><a href="#">ホーム</a></li>
-                    <li class="p-header__nav-list"><a href="#">事務所概要</a></li>
-                    <li class="p-header__nav-list"><a href="#">サービス</a></li>
-                    <li class="p-header__nav-list"><a href="#">新着情報</a></li>
-                    <li class="p-header__nav-list p-header__contact-list"><a href="#">お問い合わせ</a></li>
+                    <li class="p-header__nav-list p-header__under-line"><a href="index.html">ホーム</a></li>
+                    <li class="p-header__nav-list p-header__under-line"><a href="index.html">事務所概要</a></li>
+                    <li class="p-header__nav-list p-header__under-line"><a href="index.html">サービス</a></li>
+                    <li class="p-header__nav-list p-header__under-line"><a href="index.html">新着情報</a></li>
+                    <li class="p-header__nav-list p-header__contact-list"><a href="index.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <nav class="p-header__nav-pc">
+                <ul class="p-header__nav-box">
+                    <li class="p-header__nav-list p-header__under-line"><a href="index.html">ホーム</a></li>
+                    <li class="p-header__nav-list p-header__under-line"><a href="index.html">事務所概要</a></li>
+                    <li class="p-header__nav-list p-header__under-line"><a href="index.html">サービス</a></li>
+                    <li class="p-header__nav-list p-header__under-line"><a href="index.html">新着情報</a></li>
+                    <li class="p-header__nav-list p-header__contact-list"><a href="index.html">お問い合わせ</a></li>
                 </ul>
             </nav>
             <button type="button" class="btn js-btn" aria-expanded="false">
@@ -33,9 +42,12 @@
         <div class="p-main">
             <div class="p-main__mask"></div>
             <div class="p-main__top-visual">
-                <img class="p-main__top-visual-top-img" src="/images/写真.png" alt="トップ画像">
-                <img class="p-main__top-visual-top-pc-img" src="/images/pc-top-img.png" alt="トップ画像">
-                <h2 class="p-main__top-visual-title">法律関係の手続きについて<br>安心してお任せください。</h2>
+                <div class="p-main__top-visual-top-img">
+                    <h2 class="p-main__top-visual-title">法律関係の手続きについて<br>安心してお任せください。</h2>
+                </div>
+                <!-- <img class="p-main__top-visual-top-img" src="/images/写真.png" alt="トップ画像">
+                <img class="p-main__top-visual-top-pc-img" src="/images/pc-top-img.png" alt="トップ画像"> -->
+                <!-- <h2 class="p-main__top-visual-title">法律関係の手続きについて<br>安心してお任せください。</h2> -->
             </div>
         </div>
         <article>
@@ -143,17 +155,19 @@
                         <h3 class="p-main__contact-title section-title">CONTACT</h3>
                         <p class="p-main__contact-text section-title__sub">お問い合わせ</p>
                     </div>
-                    <div class="p-main__contact-tell-box">
-                        <p class="p-main__contact-tell-box-title">お電話でのお問い合わせ</p>
-                        <div class="p-main__contact-block">
-                            <p class="p-main__contact-tell-number"><i class="fas fa-phone-alt"></i>012-3456-7890</p>
-                            <p class="p-main__contact-tell-text">受付時間　9:00 ~ 18:30 ( 定休日 ◯曜日 )</p>
+                    <div class="p-main__contact-box">
+                        <div class="p-main__contact-tell-box">
+                            <p class="p-main__contact-tell-box-title">お電話でのお問い合わせ</p>
+                            <div class="p-main__contact-block">
+                                <p class="p-main__contact-tell-number"><i class="fas fa-phone-alt"></i>012-3456-7890</p>
+                                <p class="p-main__contact-tell-text">受付時間　9:00 ~ 18:30 ( 定休日 ◯曜日 )</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="p-main__contact-mail-box">
-                        <p class="p-main__web-contact">Webでのお問い合わせ</p>
-                        <div class="p-main__contact-form-box">
-                            <a class="p-main__contact-form" href="#"><i class="fas fa-envelope"></i>お問い合わせフォームはこちら</a>
+                        <div class="p-main__contact-mail-box">
+                            <p class="p-main__web-contact">Webでのお問い合わせ</p>
+                            <div class="p-main__contact-form-box">
+                                <a class="p-main__contact-form" href="#"><i class="fas fa-envelope"></i>お問い合わせフォームはこちら</a>
+                            </div>
                         </div>
                     </div>
                 </div>

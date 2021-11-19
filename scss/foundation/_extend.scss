@@ -1,0 +1,17 @@
+@charset "UTF-8";
+//ヘッダー、フッターのアンダーライン
+.under-line {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    /*線の形状*/
+    width: 100%;
+    height: 1px;
+    background: #364E66;
+    /*アニメーションの指定*/
+    transition: all .4s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: left top;/*左上基点*/
+}

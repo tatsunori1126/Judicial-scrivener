@@ -39,11 +39,17 @@
                         line-height: 65px;
                         margin-bottom: 25px;
                         color: #32415B;
+                        transition: all 0.5s ease-out;
+                        background-position: 1% 50%;
+                        background-size: 200% auto;
                         @include mixin.tab {
                             font-size: 18px;
                         }
                         @include mixin.mid {
                             font-size: 16px;
+                        }
+                        @include mixin.sub {
+                            font-size: 20px;
                         }
                         img {
                             margin-left: 38px;
@@ -51,6 +57,9 @@
                             position: relative;
                             top: 10px;
                         }
+                    }
+                    a:hover {
+                        background-position: 99% 50%;
                     }
                     a::after {
                         content: "";
@@ -79,6 +88,9 @@
             }
             @include mixin.mid {
                 text-align: center;
+            }
+            @include mixin.sub {
+                font-size: 20px;
             }
         }
     }

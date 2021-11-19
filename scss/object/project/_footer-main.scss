@@ -14,6 +14,9 @@
         height: 260px;
     }
     &__access-box {
+        @include mixin.sub {
+            margin-right: 200px;
+        }
         .p-footer__office-name {
             padding: 50px 0 16px 0;
             font-size: 20px;
